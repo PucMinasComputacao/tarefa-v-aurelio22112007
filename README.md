@@ -9,10 +9,10 @@ Nessa atividade,vamos evoluir o projeto para que a home-page funcione bem tanto 
 
 ## Informações Gerais
 
-- Nome:
-- Matricula:
-- Proposta de projeto escolhida:
-- Breve descrição sobre seu projeto:
+- Nome: Aurélio Augusto
+- Matricula: 923291
+- Proposta de projeto escolhida: Site sobre o cruzeiro
+- Breve descrição sobre seu projeto: Site simples e fácil de usar, perfeito para torcedores fanáticos do cruzeiro
 
 ## Print da versão responsiva com CSS puro [DESKTOP]
 
