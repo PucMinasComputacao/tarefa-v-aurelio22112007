@@ -1,119 +1,208 @@
-/* RESET */
-body {
+/* ==================== RESET ==================== */
+* {
   margin: 0;
-  font-family: Arial;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
 }
 
-/* HEADER */
+/* ==================== BODY ==================== */
+body {
+  background-color: #f5f5f5;
+  color: #333;
+}
+
+/* ==================== HEADER ==================== */
 .header {
-  background: #0033a0;
-  color: white;
-  padding: 15px;
   display: flex;
   justify-content: space-between;
+  align-items: center;
+  background-color: #0033a0; /* Azul Cruzeiro */
+  color: #fff;
+  padding: 15px 20px;
 }
 
-/* FORM */
+.header h1 {
+  font-size: 1.8rem;
+}
+
+.header form {
+  display: flex;
+  gap: 5px;
+}
+
 .header form input {
   padding: 5px;
   border: none;
+  border-radius: 3px;
 }
 
 .header form button {
-  padding: 5px;
+  padding: 5px 10px;
+  border: none;
+  background-color: #ffcc00; /* amarelo */
+  color: #0033a0;
+  cursor: pointer;
+  border-radius: 3px;
 }
 
-/* NAV */
+/* ==================== NAV ==================== */
 .nav {
-  background: #ddd;
-  padding: 10px;
   display: flex;
+  justify-content: center;
+  background-color: #ddd;
+  padding: 10px;
   gap: 20px;
 }
 
 .nav a {
   text-decoration: none;
   color: black;
+  font-weight: bold;
 }
 
-/* LAYOUT */
+.nav a:hover {
+  text-decoration: underline;
+}
+
+/* ==================== CONTAINER ==================== */
 .container {
   display: flex;
-}
-
-/* SIDEBAR */
-.sidebar {
-  width: 180px;
-  background: #eee;
-  padding: 10px;
-  display: flex;
-  flex-direction: column;
-}
-
-/* COMBINAÇÃO DE SELETOR */
-.sidebar a {
-  margin: 10px 0;
-  text-decoration: none;
-  color: black;
-}
-
-/* MAIN */
-.main {
-  flex: 1;
+  gap: 15px;
   padding: 15px;
 }
 
-/* BANNER */
+/* ==================== SIDEBAR ==================== */
+.sidebar {
+  width: 180px;
+  background-color: #eee;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.sidebar a {
+  text-decoration: none;
+  color: #0033a0;
+}
+
+.sidebar a:hover {
+  font-weight: bold;
+}
+
+/* ==================== MAIN ==================== */
+.main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 10px;
+}
+
+/* ==================== BANNER ==================== */
 .banner {
   width: 100%;
   height: 200px;
-  background: #ccc;
+  background-color: #ccc;
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
-  margin-bottom: 20px;
+  align-items: center;
 }
 
 .banner img {
   width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-/* SECTIONS */
-.section {
-  margin-bottom: 20px;
-}
-
-/* CARDS */
-.cards {
-  display: flex;
-  gap: 15px;
-}
-
-/* CARD */
-.card {
-  width: 150px;
-  height: 140px;
-  background: #ddd;
-  padding: 5px;
-  text-align: center;
-  position: relative;
-}
-
-/* COMBINAÇÃO DE SELETOR */
-.card img {
-  width: 100%;
-  height: 80px;
+  height: auto;       /* altura proporcional */
+  max-height: 300px;  /* limite máximo */
   object-fit: cover;
   border-radius: 5px;
 }
 
-/* FOOTER */
+/* ==================== SECTIONS ==================== */
+.section {
+  margin-bottom: 20px;
+}
+
+.section h2 {
+  margin-bottom: 10px;
+}
+
+/* ==================== CARDS ==================== */
+.cards {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 2 colunas no desktop */
+  gap: 15px;
+}
+
+.card {
+  background-color: #ddd;
+  padding: 5px;
+  text-align: center;
+  border-radius: 5px;
+}
+
+.card img {
+  width: 100%;
+  height: 120px;     /* altura fixa para uniformidade */
+  max-height: 120px;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+/* ==================== FOOTER ==================== */
 .footer {
-  background: #0033a0;
+  background-color: #0033a0;
   color: white;
   text-align: center;
   padding: 10px;
+}
+
+/* ==================== MEDIA QUERIES (RESPONSIVO) ==================== */
+@media (max-width: 768px) {
+
+  /* Container vira coluna */
+  .container {
+    flex-direction: column;
+  }
+
+  /* Sidebar horizontal rolável */
+  .sidebar {
+    width: 100%;
+    flex-direction: row;
+    overflow-x: auto;
+    gap: 10px;
+  }
+
+  /* Cards 1 coluna */
+  .cards {
+    grid-template-columns: 1fr;
+  }
+
+  /* Header empilha */
+  .header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  /* Nav empilha */
+  .nav {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 5px;
+  }
+
+  /* Banner menor */
+  .banner {
+    height: 150px;
+  }
+
+  .banner img {
+    max-height: 200px;
+  }
+
+  .card img {
+    max-height: 100px;
+  }
 }
