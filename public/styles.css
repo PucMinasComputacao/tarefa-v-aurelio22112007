@@ -1,0 +1,119 @@
+/* RESET */
+body {
+  margin: 0;
+  font-family: Arial;
+}
+
+/* HEADER */
+.header {
+  background: #0033a0;
+  color: white;
+  padding: 15px;
+  display: flex;
+  justify-content: space-between;
+}
+
+/* FORM */
+.header form input {
+  padding: 5px;
+  border: none;
+}
+
+.header form button {
+  padding: 5px;
+}
+
+/* NAV */
+.nav {
+  background: #ddd;
+  padding: 10px;
+  display: flex;
+  gap: 20px;
+}
+
+.nav a {
+  text-decoration: none;
+  color: black;
+}
+
+/* LAYOUT */
+.container {
+  display: flex;
+}
+
+/* SIDEBAR */
+.sidebar {
+  width: 180px;
+  background: #eee;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+/* COMBINAÇÃO DE SELETOR */
+.sidebar a {
+  margin: 10px 0;
+  text-decoration: none;
+  color: black;
+}
+
+/* MAIN */
+.main {
+  flex: 1;
+  padding: 15px;
+}
+
+/* BANNER */
+.banner {
+  width: 100%;
+  height: 200px;
+  background: #ccc;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.banner img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* SECTIONS */
+.section {
+  margin-bottom: 20px;
+}
+
+/* CARDS */
+.cards {
+  display: flex;
+  gap: 15px;
+}
+
+/* CARD */
+.card {
+  width: 150px;
+  height: 140px;
+  background: #ddd;
+  padding: 5px;
+  text-align: center;
+  position: relative;
+}
+
+/* COMBINAÇÃO DE SELETOR */
+.card img {
+  width: 100%;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+/* FOOTER */
+.footer {
+  background: #0033a0;
+  color: white;
+  text-align: center;
+  padding: 10px;
+}
